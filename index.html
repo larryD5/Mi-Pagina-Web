@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="css/estilo.css" />
   </head>
   <body>
+    <!-- div contenedor principal que contiene toda la pagina -->
     <div id="contenedor">
+      <!-- div seccion-login es para el formulario de inicio de sesion -->
       <div id="seccion-login">
+        <!-- h2 con clase subtitulo para el texto de iniciar sesion -->
         <h2 class="subtitulo">Iniciar Sesión en Te Lo Doy BAQ</h2>
         <br />
+
+        <!-- form es para crear formularios y id formulario-login para identificarlo en javascript -->
         <form id="formulario-login">
+          <!-- input type text para que el usuario escriba su nombre de usuario -->
           <input type="text" id="usuario" placeholder="Usuario" />
           <br /><br />
+
+          <!-- input type password para que no se vea lo que escribe el usuario -->
           <input type="password" id="clave" placeholder="Contraseña" />
           <br /><br />
+
+          <!-- button con onclick para que cuando le den click ejecute la funcion iniciarSesion -->
           <button
             type="button"
             onclick="iniciarSesion(event)"
@@ -23,23 +33,36 @@
           >
             Ingresar
           </button>
+
+          <!-- p con id mensaje-error para mostrar mensajes cuando el usuario se equivoque -->
           <p id="mensaje-error"></p>
         </form>
 
+        <!-- hr es la linea divisoria entre el formulario y los datos de prueba -->
         <hr id="separador-login" />
+
+        <!-- h4 para el titulo de datos de pruebas -->
         <h4 id="titulo-pruebas">Datos de inicio de sesión para pruebas</h4>
 
+        <!-- div contenedor-tarjetas es para agrupar las tres tarjetas de prueba -->
         <div class="contenedor-tarjetas">
+          <!-- div tarjeta-prueba para cada rol de usuario -->
           <div class="tarjeta-prueba">
+            <!-- h3 para el titulo del rol -->
             <h3>Rol: Donante</h3>
+            <!-- p con strong para resaltar los textos usuario y clave -->
             <p><strong>Usuario:</strong> donante1</p>
             <p><strong>Clave:</strong> 123</p>
           </div>
+
+          <!-- segunda tarjeta para beneficiario -->
           <div class="tarjeta-prueba">
             <h3>Rol: Beneficiario</h3>
             <p><strong>Usuario:</strong> beneficiario1</p>
             <p><strong>Clave:</strong> 123</p>
           </div>
+
+          <!-- tercera tarjeta para administrador -->
           <div class="tarjeta-prueba">
             <h3>Rol: Administrador</h3>
             <p><strong>Usuario:</strong> admin</p>
@@ -47,15 +70,28 @@
           </div>
         </div>
       </div>
+
+      <!-- div panel-principal es la seccion que se muestra despues de iniciar sesion -->
+      <!-- clase oculto es para que no se vea hasta que el usuario inicie sesion -->
       <div id="panel-principal" class="oculto">
+        <!-- div encabezado para el titulo y boton de cerrar sesion -->
         <div id="encabezado">
+          <!-- h1 con id titulo-panel para mostrar el titulo segun el rol -->
           <h1 id="titulo-panel"></h1>
+          <!-- p con id nombre-usuario para mostrar el nombre del usuario que inicio sesion -->
           <p id="nombre-usuario"></p>
+          <!-- button con onclick para cerrar la sesion del usuario -->
           <button onclick="cerrarSesion()">Cerrar Sesión</button>
         </div>
+
+        <!-- div contenido para la seccion principal y la barra lateral -->
         <div id="contenido">
+          <!-- div seccion-principal donde va el contenido segun el rol del usuario -->
           <div id="seccion-principal"></div>
+
+          <!-- div barra-lateral para la informacion del creador -->
           <div id="barra-lateral">
+            <!-- div creador-info para agrupar la informacion del autor -->
             <div class="creador-info">
               <h3>Información del Creador</h3>
               <p><strong>Autor:</strong> Larry Enrique Díaz Polo</p>
@@ -66,16 +102,23 @@
               </p>
               <p><strong>Código Postal:</strong> 080001 (dato inventado)</p>
 
+              <!-- hr con clase separador-creador para dividir la informacion personal del credito de la IA -->
               <hr class="separador-creador" />
+
+              <!-- p con clase credito-ia para mi amigo incondicional -->
               <p class="credito-ia">
                 Con ayuda de mi buen amigo Gemini (IA) 🤝😎
               </p>
             </div>
           </div>
         </div>
+
+        <!-- div pie-pagina para informacion final -->
         <div id="pie-pagina"><p>Te Lo Doy BAQ - 2025</p></div>
       </div>
     </div>
+
+    <!-- script es para conectar el archivo javascript -->
     <script src="js/script.js"></script>
   </body>
 </html>

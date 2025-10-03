@@ -1,12 +1,23 @@
+/* la estructura mas reciente que debo usar siempre para funciones */
+/* funciones anonimas de tipo flecha */
+
 /* --- OBTENEMOS LOS ELEMENTOS DEL HTML QUE VAMOS A USAR UNA SOLA VEZ --- */
+
+/* seccionLogin es para el formulario de inicio de sesion */
 const seccionLogin = document.getElementById("seccion-login");
+
+/* panelPrincipal es la seccion que se muestra despues de iniciar sesion */
 const panelPrincipal = document.getElementById("panel-principal");
+
+/* formularioLogin para identificar el formulario en javascript */
 const formularioLogin = document.getElementById("formulario-login");
+
+/* seccionPrincipal donde va el contenido segun el rol del usuario */
 const seccionPrincipal = document.getElementById("seccion-principal");
 
 /* --- FUNCIONES PARA MOSTRAR EL CONTENIDO DE CADA ROL --- */
 
-/* Esta función prepara y muestra el contenido para el Donante */
+/* Esta funcion prepara y muestra el contenido para el Donante */
 function mostrarContenidoDonante() {
   let contenidoHTML = `
         <h2 class="subtitulo">Panel del Donante</h2>
@@ -21,7 +32,7 @@ function mostrarContenidoDonante() {
     `;
   seccionPrincipal.innerHTML = contenidoHTML;
 
-  // Cargamos los datos para la tabla del donante
+  /* Cargamos los datos para la tabla del donante */
   fetch("json/mis_donaciones.json")
     .then((respuesta) => respuesta.json())
     .then((datos) => {
@@ -33,7 +44,7 @@ function mostrarContenidoDonante() {
     });
 }
 
-/* Esta función prepara y muestra el contenido para el Administrador */
+/* Esta funcion prepara y muestra el contenido para el Administrador */
 function mostrarContenidoAdmin() {
   let contenidoHTML = `
         <h2 class="subtitulo">Panel de Administración</h2>
@@ -57,7 +68,7 @@ function mostrarContenidoAdmin() {
     });
 }
 
-/* Esta función prepara y muestra el contenido para el Beneficiario */
+/* Esta funcion prepara y muestra el contenido para el Beneficiario */
 function mostrarContenidoBeneficiario() {
   let contenidoHTML = `
         <h2 class="subtitulo">Catálogo de Artículos Disponibles</h2>
@@ -83,9 +94,9 @@ function mostrarContenidoBeneficiario() {
 
 /* --- FUNCIONES PRINCIPALES DE LA APLICACIÓN --- */
 
-/* Esta función se ejecuta cuando se presiona el botón "Ingresar" */
+/* Esta funcion se ejecuta cuando se presiona el boton "Ingresar" */
 function iniciarSesion(evento) {
-  evento.preventDefault(); // Esta línea detiene cualquier comportamiento por defecto del formulario
+  evento.preventDefault(); /* Esta linea detiene cualquier comportamiento por defecto del formulario */
 
   let user = document.getElementById("usuario").value;
   let pass = document.getElementById("clave").value;
@@ -114,7 +125,7 @@ function iniciarSesion(evento) {
     });
 }
 
-/* Esta función muestra el panel principal correcto según el rol del usuario */
+/* Esta funcion muestra el panel principal correcto segun el rol del usuario */
 function mostrarPanelPrincipal(usuario) {
   seccionLogin.classList.add("oculto");
   panelPrincipal.classList.remove("oculto");
@@ -132,7 +143,7 @@ function mostrarPanelPrincipal(usuario) {
   }
 }
 
-/* Esta función es para cerrar la sesión */
+/* Esta funcion es para cerrar la sesion */
 function cerrarSesion() {
   localStorage.removeItem("usuarioActual");
   panelPrincipal.classList.add("oculto");
@@ -140,7 +151,7 @@ function cerrarSesion() {
   formularioLogin.reset();
 }
 
-/* Esta función se ejecuta apenas carga la página para ver si ya hay una sesión iniciada */
+/* Esta funcion se ejecuta apenas carga la pagina para ver si ya hay una sesion iniciada */
 function verificarSesion() {
   const usuarioGuardado = localStorage.getItem("usuarioActual");
   if (usuarioGuardado) {
@@ -149,5 +160,5 @@ function verificarSesion() {
   }
 }
 
-/* Ejecutamos la verificación de sesión al cargar la página */
+/* Ejecutamos la verificacion de sesion al cargar la pagina */
 verificarSesion();

@@ -1,0 +1,14 @@
+[
+    {
+        "articulo": "Silla de madera",
+        "estado": "✅ Aceptado"
+    },
+    {
+        "articulo": "Camisa de hombre",
+        "estado": "⏳ En revisión"
+    },
+    {
+        "articulo": "Juego de vasos",
+        "estado": "❌ Rechazado"
+    }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "articulo": "Mesa de noche",
+    "descripcion": "Buen estado, madera pino",
+    "disponibilidad": "✅ Disponible"
+  },
+  {
+    "articulo": "Ventilador",
+    "descripcion": "Funciona, 3 velocidades",
+    "disponibilidad": "✅ Disponible"
+  },
+  {
+    "articulo": "Caja de libros",
+    "descripcion": "Novelas y cuentos varios",
+    "disponibilidad": "✅ Disponible"
+  }
+]

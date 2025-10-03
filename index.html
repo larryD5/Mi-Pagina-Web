@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Te Lo Doy BAQ - Maqueta</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body>
+    <div id="contenedor">
+      <div id="seccion-login">
+        <h2 class="subtitulo">Iniciar Sesión en Te Lo Doy BAQ</h2>
+        <br />
+        <form id="formulario-login">
+          <input type="text" id="usuario" placeholder="Usuario" />
+          <br /><br />
+          <input type="password" id="clave" placeholder="Contraseña" />
+          <br /><br />
+          <button
+            type="button"
+            onclick="iniciarSesion(event)"
+            class="boton-principal"
+          >
+            Ingresar
+          </button>
+          <p id="mensaje-error"></p>
+        </form>
+
+        <hr id="separador-login" />
+        <h4 id="titulo-pruebas">Datos de inicio de sesión para pruebas</h4>
+
+        <div class="contenedor-tarjetas">
+          <div class="tarjeta-prueba">
+            <h3>Rol: Donante</h3>
+            <p><strong>Usuario:</strong> donante1</p>
+            <p><strong>Clave:</strong> 123</p>
+          </div>
+          <div class="tarjeta-prueba">
+            <h3>Rol: Beneficiario</h3>
+            <p><strong>Usuario:</strong> beneficiario1</p>
+            <p><strong>Clave:</strong> 123</p>
+          </div>
+          <div class="tarjeta-prueba">
+            <h3>Rol: Administrador</h3>
+            <p><strong>Usuario:</strong> admin</p>
+            <p><strong>Clave:</strong> admin</p>
+          </div>
+        </div>
+      </div>
+      <div id="panel-principal" class="oculto">
+        <div id="encabezado">
+          <h1 id="titulo-panel"></h1>
+          <p id="nombre-usuario"></p>
+          <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+        <div id="contenido">
+          <div id="seccion-principal"></div>
+          <div id="barra-lateral">
+            <div class="creador-info">
+              <h3>Información del Creador</h3>
+              <p><strong>Autor:</strong> Larry Enrique Díaz Polo</p>
+              <p><strong>Correo:</strong> larryediaz@unibarranquilla.edu.co</p>
+              <p><strong>Contacto:</strong> 3150592677</p>
+              <p>
+                <strong>Dirección:</strong> Calle 72 # 54 - 15 (dato inventado)
+              </p>
+              <p><strong>Código Postal:</strong> 080001 (dato inventado)</p>
+
+              <hr class="separador-creador" />
+              <p class="credito-ia">
+                Con ayuda de mi buen amigo Gemini (IA) 🤝😎
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="pie-pagina"><p>Te Lo Doy BAQ - 2025</p></div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

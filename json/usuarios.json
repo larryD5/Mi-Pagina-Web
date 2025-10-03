@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "usuario": "donante1",
+    "clave": "123",
+    "rol": "donante",
+    "nombre": "Ana Pérez"
+  },
+
+  {
+    "id": 2,
+    "usuario": "beneficiario1",
+    "clave": "123",
+    "rol": "beneficiario",
+    "nombre": "Carlos Gómez"
+  },
+
+  {
+    "id": 3,
+    "usuario": "admin",
+    "clave": "admin",
+    "rol": "admin",
+    "nombre": "Admin BAQ"
+  }
+]
